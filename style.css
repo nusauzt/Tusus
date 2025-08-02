@@ -1,26 +1,43 @@
 body {
-  display: flex;
-  font-family: sans-serif;
   margin: 0;
+  font-family: sans-serif;
 }
-.sidebar {
-  width: 200px;
+.topbar {
   background: #2e3b4e;
   color: white;
-  padding: 20px;
-  height: 100vh;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.sidebar a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  margin: 10px 0;
+.container {
+  display: flex;
+}
+.sidebar {
+  width: 250px;
+  background: #f0f0f0;
+  padding: 20px;
 }
 .content {
+  flex: 1;
   padding: 20px;
-  flex-grow: 1;
 }
-button {
-  padding: 10px 20px;
-  font-size: 16px;
+.antwort {
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+.antwort:hover {
+  background-color: #eee;
+}
+.richtig {
+  background-color: #c8f7c5;
+}
+.falsch {
+  background-color: #f7c5c5;
+}
+.merkstern {
+  cursor: pointer;
+  float: right;
 }

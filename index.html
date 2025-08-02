@@ -2,35 +2,31 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Altenpflege Lernseite</title>
+  <title>Tusus Lernplattform</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Themen</h2>
-    <ul>
-      <li><a href="themen/herz.html">Herz-Kreislauf</a></li>
-      <li><a href="themen/atmung.html">Atmung</a></li>
-      <li><a href="themen/pflegeplanung.html">Pflegeplanung</a></li>
-    </ul>
+  <div class="topbar">
+    <h1>Tusus Lernplattform</h1>
+    <button onclick="playTususSound()">🔊 Tusus</button>
   </div>
-
-  <div class="content">
-    <h1>Willkommen zur Lernseite</h1>
-    <p>Wähle ein Thema in der linken Leiste.</p>
-
-    <button onclick="zeigeMedien()">▶️ Herz-Funktion zeigen</button>
-    <div id="medien" style="display:none;">
-      <img src="img/herz.png" alt="Herz" style="max-width:300px;">
-      <audio controls autoplay>
-        <source src="audio/herz.mp3" type="audio/mpeg">
-        Dein Browser unterstützt keine Audios.
-      </audio>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Themen</h2>
+      <ul id="themenListe">
+        <li><a href="#" onclick="ladeThema('herz')">❤️ Herz-Kreislauf <span class="merkstern">☆</span></a></li>
+        <li><a href="#" onclick="ladeThema('demenz')">🧠 Demenz <span class="merkstern">☆</span></a></li>
+        <li><a href="#" onclick="ladeThema('niere')">🔬 Niere <span class="merkstern">☆</span></a></li>
+        <li><a href="#" onclick="ladeThema('recht')">⚖️ Recht <span class="merkstern">☆</span></a></li>
+        <li><a href="#" onclick="ladeThema('pflege')">🛏️ Pflege <span class="merkstern">☆</span></a></li>
+      </ul>
+    </div>
+    <div class="content" id="inhalt">
+      <h2>Willkommen!</h2>
+      <p>Wähle links ein Thema aus.</p>
     </div>
   </div>
-
+  <audio id="tususSound" src="audio/tusus_sound.mp3"></audio>
   <script src="script.js"></script>
 </body>
 </html>
-
-
