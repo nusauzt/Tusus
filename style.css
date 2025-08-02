@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  font-family: sans-serif;
+  margin: 0;
+}
+.sidebar {
+  width: 200px;
+  background: #2e3b4e;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+}
+.content {
+  padding: 20px;
+  flex-grow: 1;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
